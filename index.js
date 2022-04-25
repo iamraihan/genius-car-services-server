@@ -96,6 +96,7 @@ async function run() {
             res.send(result)
         })
 
+
     }
     finally { }
 }
@@ -107,6 +108,11 @@ run().catch(console.dir)
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
+
+app.get('/hero', (req, res) => {
+    res.send('Hero meets HeroKu')
+})
+
 
 app.listen(port, () => {
     console.log('Example listening port', port);
